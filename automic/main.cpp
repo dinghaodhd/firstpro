@@ -3,9 +3,9 @@
 #include <atomic> 
 #include <time.h>
 
-
+//定义原子变量
 std::atomic_long total(0);
-
+//定义普通变量
 long cont(0);
 
 void thd1()
