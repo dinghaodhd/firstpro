@@ -3,9 +3,9 @@
 #include <atomic> 
 #include <time.h>
 
-//定义原子类型变量
+
 std::atomic_long total(0);
-//定义普通类型变量
+
 long cont(0);
 
 void thd1()
@@ -35,8 +35,8 @@ int main()
 	t1.join();
 	t2.join();
 
-	std::cout << "原子变量total:" << total << std::endl;
-	std::cout << "普通变量cont:" << cont << std::endl;
+	std::cout << "鍘熷瓙鍙橀噺total:" << total << std::endl;
+	std::cout << "鏅�氬彉閲廲ont:" << cont << std::endl;
 	system("pause");
 	return 0;
 }
