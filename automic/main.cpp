@@ -3,17 +3,10 @@
 #include <atomic> 
 #include <time.h>
 
+//定义原子类型变量
 std::atomic_long total(0);
+//定义普通类型变量
 long cont(0);
-
-void click()
-{
-	for (int i = 0; i < 1000000;++i)
-	{
-		// 仅仅是数据类型的不同而以，对其的访问形式与普通数据类型的资源并无区别
-		total += 1;
-	}
-}
 
 void thd1()
 {
@@ -42,8 +35,8 @@ int main()
 	t1.join();
 	t2.join();
 
-	std::cout << "total:" << total << std::endl;
-	std::cout << "cont:" << cont << std::endl;
+	std::cout << "原子变量total:" << total << std::endl;
+	std::cout << "普通变量cont:" << cont << std::endl;
 	system("pause");
 	return 0;
 }
